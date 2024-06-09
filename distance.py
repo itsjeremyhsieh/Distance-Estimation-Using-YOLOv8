@@ -5,12 +5,12 @@ import cv2
 import csv
 import matplotlib.pyplot as plt
 
-def distance_to_camera(knownWidth, focalLength, perHeight):
+def distance_to_camera(KnownHeight, focalLength, perHeight):
     # compute and return the distance from the maker to the camera
-    return float((knownWidth * focalLength) / perHeight)
+    return float((KnownHeight * focalLength) / perHeight)
 
 #set parameters
-KnownWidth = 150
+KnownHeight = 150
 focallength = 1300
 video_name = "outdoor_4"
 x_axis = []
@@ -45,7 +45,7 @@ while cap.isOpened():
                 if track_id == 9: #need to set target id manually
                     x_axis.append(cnt)
                     h *= 0.7 # *0.7, 0.8, 0.9, 1.0
-                    dist = distance_to_camera(KnownWidth, focallength, h)
+                    dist = distance_to_camera(KnownHeight, focallength, h)
                     dist = round(dist, 2)
                     y_axis.append(dist)
                     # print(f"Distance: {dist}\nH: {h}")
@@ -91,4 +91,3 @@ plt.ylabel("Distance (cm)")
 plt.savefig(video+".png")
 plt.show()
 f.close()
-
