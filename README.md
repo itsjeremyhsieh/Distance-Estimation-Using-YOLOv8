@@ -15,7 +15,7 @@ yolov8 packages should also be presented in the same working directory (clone).
 
 ### Executing Python script
 To execute the script, simply type ```python3 distance.py```
-Before executing the script, user should change the value of variable "KnownHeight", "focallength", "video_name" and "track_id" (line 45), motify of h (line 47).
+Before executing the script, user should change the value of variable "KnownHeight", "focallength", "video_name" and "track_id" (line 45), modify of h (line 47).
 
 ### Output Result
 After execution, a plot, followed by a csv file will be saved in current working directory.
